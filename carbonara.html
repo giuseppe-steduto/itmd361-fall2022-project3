@@ -5,6 +5,9 @@
   <title>How to make the perfect carbonara</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- include jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="https://malsup.github.io/min/jquery.cycle2.min.js"></script>
 </head>
 <body>
   <ul class="nav">
@@ -23,11 +26,19 @@
         It is a pasta dish from Rome, made with rather simple ingredients, but that when assembled in the right way can create one of the most delicious meal you will ever taste
         (see pics below for reference).
       </p>
-      <div id="img-container">
-        <img src="media/carbonara.png" alt="Carbonara dish with spaghetti">
-        <p>Carbonara made with spaghetti</p>
-        <img src="media/carbonara_mezze_maniche.png" alt="Carbonara dish with mezze maniche">
-        <p>Carbonara made with mezze maniche</p>
+      <div class="cycle-slideshow"
+           data-cycle-fx="scrollHorz"
+           data-cycle-timeout="2000"
+           data-cycle-pager=".cycle-pager"
+      >
+        <div class="cycle-prev"></div>
+        <div class="cycle-next"></div>
+        <div class="cycle-caption">Slideshow with carbonara pictures</div>
+        <img src="media/carbonara.png">
+        <img src="media/carbonara_mezze_maniche.png">
+        <img src="media/carbonara_again.jpg">
+        <img src="media/carbonara_altre_mezze_maniche.jpg">
+        <img src="media/carbonara_detail.jpg">
       </div>
       <h2>Authentic Carbonara recipe</h2>
       <div id="recipe-information">

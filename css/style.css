@@ -113,6 +113,12 @@ footer {
   text-align: center;
 }
 
+.cycle-slideshow img {
+  width: 95%;
+  margin: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 #recipe-information {
   display: flex;
   align-items: center;
@@ -323,7 +329,6 @@ body.resume-body {
   position: fixed;
   bottom: 0;
 }
-
 
 /** Media query for the resume page for desktop**/
 @media only screen and (min-width: 600px) {
