@@ -313,6 +313,18 @@ body.resume-body {
   margin-bottom: 1.5rem;
 }
 
+#map {
+  height: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.stick-to-bottom {
+  position: fixed;
+  bottom: 0;
+}
+
+
 /** Media query for the resume page for desktop**/
 @media only screen and (min-width: 600px) {
   .img-container img {
