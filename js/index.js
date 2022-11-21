@@ -1,4 +1,3 @@
-// Initialize and add the map
 function initMap() {
     let heatMapData = [
         {location: new google.maps.LatLng(45.3878542760081, 9.102480799850031), weight: 20},
