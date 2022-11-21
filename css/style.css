@@ -21,6 +21,7 @@ ul.nav {
 ul.nav li {
   padding: 1em;
   text-decoration: none;
+  text-align: center;
 }
 
 ul.nav li.active {
@@ -224,16 +225,16 @@ body.resume-body {
 }
 
 .img-container img {
-  width: 150px;
+  width: 250px;
   display: block;
   margin: auto;
-  border-radius: 75px;
+  border-radius: 125px;
   border: 2px solid #a3b5d3;
 }
 
 #main-fluid {
   padding-top: 5rem;
-  width: 95%;
+  width: 100%;
   max-width: 960px;
   margin: auto;
 }
@@ -244,17 +245,12 @@ body.resume-body {
 
 .card-glassmorphism {
   background-color: rgba(255,255,255,0.6);
-  border-radius: 15px;
+  border-radius: 0px;
   margin-top: 2rem;
   padding: 2rem;
   /*box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;*/
   box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
   transition: all 0.25s ease;
-  backface-visibility: hidden;
-}
-
-.card-glassmorphism:hover {
-  transform: scale(1.02);
   backface-visibility: hidden;
 }
 
@@ -267,7 +263,7 @@ body.resume-body {
 }
 
 .grid-8-4 {
-  grid-template-columns: 200px auto;
+  grid-template-columns: auto;
 }
 
 .contact-container + h1 {
@@ -275,10 +271,14 @@ body.resume-body {
 }
 
 .contact-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 75%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+}
+
+.contact-container * {
+  width: 100%;
+  margin: 0;
 }
 
 .contact-container div {
@@ -288,7 +288,6 @@ body.resume-body {
   border: 0;
   outline: 0;
   padding: 5px 15px;
-  width: fit-content;
 }
 
 .contact-container a {
@@ -312,4 +311,48 @@ body.resume-body {
   margin-left: 25%;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+}
+
+/** Media query for the resume page for desktop**/
+@media only screen and (min-width: 600px) {
+  .img-container img {
+    width: 150px;
+    border-radius: 75px;
+  }
+
+  .card-glassmorphism {
+    border-radius: 15px;
+  }
+
+  .card-glassmorphism:hover {
+    transform: scale(1.02);
+    backface-visibility: hidden;
+  }
+
+  #main-fluid {
+    width: 95%;
+  }
+
+}
+
+@media only screen and (min-width: 856px) {
+  .grid-8-4 {
+    grid-template-columns: 200px auto;
+  }
+
+  .img-container img {
+    width: 150px;
+    border-radius: 75px;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 75%;
+  }
+
+  .contact-container div {
+    width: fit-content;
+  }
 }
